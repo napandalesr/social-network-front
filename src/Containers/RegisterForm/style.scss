@@ -1,0 +1,20 @@
+@import "../../styles/index.scss";
+
+.form {
+  padding: 10px !important;
+}
+
+.ant-input-affix-wrapper {
+  background-color: $gris_background;
+  border-bottom: 1px solid $gris_background !important;
+  box-shadow: 1px 2px 16px -6px rgba(0,0,0,0.1);
+}
+.ant-input {
+  background-color: $gris_background;
+}
+
+.ant-btn {
+  background-color: $azul_primario !important;
+  border-color: $azul_primario !important;
+  width: 100%;
+}

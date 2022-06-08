@@ -1,6 +1,6 @@
 import { Divider, Form, notification, Spin } from 'antd';
 import React from 'react';
-import RegisterForm from '../../Containers/RegisterForm';
+import LoginForm from '../../Containers/LoginForm';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import "./style.scss";
 import { userHttp } from '../../Api/Module/users';
 
-const Register: React.FC = () => {
+const Login: React.FC = () => {
   const [loading, setLoading] = React.useState(false);
   const [form] = Form.useForm();
   const navigate = useNavigate();
@@ -18,7 +18,6 @@ const Register: React.FC = () => {
     try {
       const response = await userHttp.post(values);
       setLoading(false);
-      console.log(response);
       if ([200, 201, 202, 203, 204].includes(response.status)) {
         notification.success({
           message: 'Usuario creado exitosamente',
@@ -40,9 +39,9 @@ const Register: React.FC = () => {
   return <main>
     <Spin size="large" spinning={loading}>
       <Divider className='title' orientation='center'><div className="conten-icon"><FontAwesomeIcon icon={faUser}/></div></Divider>
-      <RegisterForm onFinish={save} form={form}/>
+      <LoginForm onFinish={save} form={form}/>
     </Spin>
   </main>;
 };
 
-export default Register;
+export default Login;
