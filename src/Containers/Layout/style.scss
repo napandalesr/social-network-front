@@ -1,3 +1,7 @@
+@import "../../styles/index.scss";
+
 main {
-  max-width: 1140px;
+  max-width: $width_default;
+  margin: auto;
+  border: solid;
 }
