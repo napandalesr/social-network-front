@@ -1,17 +1,17 @@
 import React from "react";
 
-import PrivateRoutes from "./PrivateRoutes";
+import Layout from "../Containers/Layout";
 import PublicRoutes from "./PublicRoutes";
 
 const Router: React.FC = () => {
   const IsLoggedIn = (): boolean => {
-    return true;
+    return false;
   };
 
   return <>
   {
     IsLoggedIn()
-      ? <PrivateRoutes/>
+      ? <Layout/>
       : <PublicRoutes/>
   }
   </>;

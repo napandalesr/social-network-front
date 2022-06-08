@@ -5,7 +5,7 @@ import { ConfigProvider } from 'antd';
 import { store } from './Redux/Store';
 import es_ES from 'antd/lib/locale/es_ES';
 
-import Layout from './Containers/Layout';
+import Router from './Routes';
 
 import "./index.scss";
 import 'antd/dist/antd.min.css';
@@ -17,7 +17,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
     <ConfigProvider locale={es_ES}>
-      <Layout />
+      <Router />
     </ConfigProvider>
     </Provider>
   </React.StrictMode>
