@@ -1,7 +1,7 @@
 const types = {
 
-}
+};
 
 export {
   types
-}
+};
