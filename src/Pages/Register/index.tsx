@@ -37,12 +37,14 @@ const Register: React.FC = () => {
     }
   };
 
-  return <main>
-    <Spin size="large" spinning={loading}>
-      <Divider className='title' orientation='center'><div className="conten-icon"><FontAwesomeIcon icon={faUser}/></div></Divider>
-      <RegisterForm onFinish={save} form={form}/>
-    </Spin>
-  </main>;
+  return <section className='main-register'>
+    <div className="register">
+      <Spin size="large" spinning={loading}>
+        <Divider className='title' orientation='center'><div className="conten-icon"><FontAwesomeIcon icon={faUser}/></div></Divider>
+        <RegisterForm onFinish={save} form={form}/>
+      </Spin>
+    </div>
+  </section>;
 };
 
 export default Register;

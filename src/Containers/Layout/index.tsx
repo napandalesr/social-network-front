@@ -12,6 +12,7 @@ import "./style.scss";
 const Layout: React.FC = () => {
   return <Suspense fallback={<Preloader/>}>
     <BrowserRouter>
+    <div className="main">
       <Header/>
       <main>
         <Row>
@@ -19,6 +20,7 @@ const Layout: React.FC = () => {
         </Row>
       </main>
       <Footer/>
+    </div>
     </BrowserRouter>
   </Suspense>;
 };
